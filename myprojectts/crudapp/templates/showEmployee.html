@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Show Records</title>
+</head>
+<body>
+<h1 align="center">Employee Details</h1>
+<table align="center" border="1">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Salary</th>
+        <th>Designation</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    {% for emp in data  %}
+    <tr>
+        <td>{{emp.id}}</td>
+        <td>{{emp.name}}</td>
+        <td>{{emp.salary}}</td>
+        <td>{{emp.designation}}</td>
+        <td>
+            <a href="{% url 'updateEmployee' emp.id %}">Edit</a>
+            <a href="{% url 'deleteEmployee' emp.id %}">Delete</a>
+        </td>
+    </tr>
+
+{% endfor %}
+</table>
+
+
+
+
+
+</body>
+</html>
+
+

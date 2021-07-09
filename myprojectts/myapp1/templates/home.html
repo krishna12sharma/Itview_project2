@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HomePage</title>
+</head>
+<body>
+<h1>I am a homepage!!!</h1>
+<p>Student name is {{sname}} </p>
+<a href="{% url 'aboutpage' %}">About</a>
+
+
+{% if 2 > 4 %}
+   <h2>condition is true</h2>
+{% else %}
+   <h2>condition is false</h2>
+{% endif %}
+
+{% if n1 > n2 and n1 > n3 %}
+   <h2>{{n1}} is largest number</h2>
+{% elif n2 > n1 and n2 > n3 %}
+      <h2>{{n2}} is largest number</h2>
+{% else %}
+    <h2>{{n3}} is largest number</h2>
+{% endif %}
+
+{% for data in list %}
+    {{data}}
+{% endfor %}
+
+
+
+
+
+
+
+</body>
+</html>

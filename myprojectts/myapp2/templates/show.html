@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Show Records</title>
+</head>
+<body>
+<h1 align="center">Student Details</h1>
+<table align="center" border="1">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Marks</th>
+        <th>City</th>
+    </tr>
+    </thead>
+    {% for std in data  %}
+    <tr>
+        <td>{{std.id}}</td>
+        <td>{{std.name}}</td>
+        <td>{{std.marks}}</td>
+        <td>{{std.city}}</td>
+    </tr>
+
+
+
+{% endfor %}
+</table>
+
+
+
+
+
+</body>
+</html>
